@@ -58,6 +58,7 @@ The solution file basically specifies the movements of the vehicles in the
 format that below.
 
     template
+     
      color of vehicle number of spaces to move direction of movements
 
     example
