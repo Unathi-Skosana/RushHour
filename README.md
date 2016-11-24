@@ -13,8 +13,11 @@ single board file or a directory that contains board files.
 
     examples
      
-     *`java RushHour testCases/`
-     *`java RushHour testCases/testCase01`
+     java RushHour testCases/
+     
+     or
+     
+     java RushHour testCases/testCase01
 
 
 ##Rules
