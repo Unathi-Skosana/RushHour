@@ -1,0 +1,44 @@
+RE
+1 2
+2 1
+Left Right
+PU
+0 1
+3 1
+Left Right
+YE
+0 2
+1 2
+Down Up
+PI
+2 4
+1 2
+Down Up
+LI
+3 0
+1 2
+Down Up
+BB
+3 2
+1 2
+Down Up
+BL
+3 4
+2 1
+Left Right
+SO
+3 5
+2 1
+Left Right
+CA
+4 0
+1 3
+Down Up
+GR
+4 3
+2 1
+Left Right
+BR
+5 4
+1 2
+Down Up

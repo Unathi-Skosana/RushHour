@@ -1,0 +1,52 @@
+RE
+2 2
+2 1
+LR
+PU
+0 0
+3 1
+LR
+PI
+0 1
+1 2
+DU
+BR
+0 3
+2 1
+LR
+YE
+1 1
+2 1
+LR
+BL
+1 4
+1 2
+DU
+SO
+2 3
+1 2
+DU
+CR
+2 5
+2 1
+LR
+CA
+3 0
+1 2
+DU
+OR
+4 0
+1 3
+DU
+MA
+4 4
+2 1
+LR
+RO
+4 5
+2 1
+LR
+DG
+5 0
+1 3
+DU
