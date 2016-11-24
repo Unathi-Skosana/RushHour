@@ -11,7 +11,8 @@ specified in section file formats section.
 The input to the program is a commnad line argument that can specifies a 
 single board file or a directory that contains board files.
 
-     ####examples
+    examples
+     
      *`java RushHour testCases/`
      *`java RushHour testCases/testCase01`
 
@@ -28,7 +29,7 @@ single board file or a directory that contains board files.
 The board files are written in block of four lines that represent properties of the vehicles
 on that game board. The following text is a template of the properties of a single vehicle.
      
-     template
+    template
      
      color of vehicle
      x-coordinate y-coordinate
@@ -36,7 +37,7 @@ on that game board. The following text is a template of the properties of a sing
      orientation
 
 
-     example
+    example
 
      RE
      2 2
@@ -56,10 +57,10 @@ on that game board. The following text is a template of the properties of a sing
 The solution file basically specifies the movements of the vehicles in the
 format that below.
 
-     template
+    template
      color of vehicle number of spaces to move direction of movements
 
-     #####example
+    example
 
      RE 1 L
 
