@@ -73,7 +73,7 @@ public class Solver {
         RushHourBlockGrid board =  new RushHourBlockGrid(gameBoard.getBoardWidth(),
                 gameBoard.getBoardHeight());
 
-        int numProperties = 8;
+        int numProperties = 7;
         
         for (int i = numProperties; i <= this.numBlocks * numProperties; i = i + numProperties) {
             String blockHash = hashCode.substring(i - numProperties, i);
@@ -82,8 +82,8 @@ public class Solver {
             int width  = Integer.parseInt(blockHash.substring(2, 3));
             int height = Integer.parseInt(blockHash.substring(3, 4));
             String color =  blockHash.substring(4,6);
-            String allowedMoves = blockHash.substring(6, 8);
-            board.addBlock(x, y, width, height, color, allowedMoves);
+            String orientation = blockHash.substring(6, 7);
+            board.addBlock(x, y, width, height, color, orientation);
         }
 
         return board;
@@ -240,8 +240,8 @@ public class Solver {
             input.hasNext(" ");
             int height = input.nextInt();
             input.nextLine();
-            String allowedMoves = input.nextLine();
-            blockGrid.addBlock(x, y, width, height, color, allowedMoves);
+            String orientation = input.nextLine();
+            blockGrid.addBlock(x, y, width, height, color, orientation);
         }
 
         return blockGrid;
@@ -267,9 +267,9 @@ public class Solver {
         // Skip two lines.
         input.nextLine();
         input.nextLine();
-        String allowedMoves = input.nextLine();
+        String orientation = input.nextLine();
 
-        if (!allowedMoves.contains("LR")) {
+        if (!orientation.equals("h")) {
             throw new RuntimeException("Error: The red block should be limited to only horizontal movements!");
         }
     }

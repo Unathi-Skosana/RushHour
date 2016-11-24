@@ -1,52 +1,52 @@
 RE
 2 2
 2 1
-LR
+h
 PU
 0 0
 3 1
-LR
+h
 PI
 0 1
 1 2
-DU
+v
 BR
 0 3
 2 1
-LR
+h
 YE
 1 1
 2 1
-LR
+h
 BL
 1 4
 1 2
-DU
+v
 SO
 2 3
 1 2
-DU
+v
 CR
 2 5
 2 1
-LR
+h
 CA
 3 0
 1 2
-DU
+v
 OR
 4 0
 1 3
-DU
+v
 MA
 4 4
 2 1
-LR
+h
 RO
 4 5
 2 1
-LR
+h
 DG
 5 0
 1 3
-DU
+v

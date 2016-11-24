@@ -89,7 +89,7 @@ public class RushHourGUI {
       */
 
     public void moveBlock(RushHourBlock block, String direction, int spaces) throws InterruptedException {
-        if (block.getAllowedMoves().contains(direction)) {
+        if (block.getOrientation().equals("h") ) {
             switch (direction) {
                 case "L":
                     for (int i = 0; i < spaces; i++) {
@@ -106,7 +106,10 @@ public class RushHourGUI {
                     }
 
                     break;
+            }
 
+        } else if (block.getOrientation().equals("v")) {
+            switch(direction) {
                 case "U":
                     for (int i = 0; i < spaces; i++) {
                         block.setY(block.getY() - 1);
@@ -121,9 +124,6 @@ public class RushHourGUI {
                         drawVehicles();
                     }
 
-                    break;
-
-                default:
                     break;
             }
         }

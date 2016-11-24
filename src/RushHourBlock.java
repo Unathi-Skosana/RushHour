@@ -9,7 +9,7 @@ public class RushHourBlock {
     private int height;
     private Position point;
     private String hashCode;
-    private String allowedMoves;
+    private final String orientation;
 
     /**
       * initializes a block object by assigning
@@ -21,16 +21,16 @@ public class RushHourBlock {
       * @param width -  width
       * @param height - height
       * @param color - color of block
-      * @param legalDirections - allowed directions of movement.
+      * @param orientation - allowed direction of movements.
       */
 
     public RushHourBlock(Position point, int width,
-            int height, String color, String allowedMoves) {
+            int height, String color, String orientation) {
         this.point = point;
         this.width = width;
         this.height = height;
         this.color  = color;
-        this.allowedMoves = allowedMoves;
+        this.orientation = orientation;
         this.hashCode = getHashCode();
     }
     
@@ -45,15 +45,15 @@ public class RushHourBlock {
     }
 
     /**
-      * returns legal directions list
-      * @return legalMovesList ArrayList of Strings
-      *     containing legal moves.
+      * returns the orientation of this block.
+      * @return String orientation
       */
 
-    public String getAllowedMoves() {
-        return allowedMoves;
+    public String getOrientation() {
+        return orientation;
     }
 
+    
     /**
       * returns width.
       * @return int width
@@ -122,22 +122,10 @@ public class RushHourBlock {
 
     public String getHashCode() {
         String hash = point.getX() + "" + point.getY() + "" + width + "" + height + "" + color;
-        hash = hash + allowedMoves;
+        hash = hash + orientation;
 
         return hash;
     }
 
-    /**
-      * returns a String representation of the
-      * this block by searching the legal directions list.
-      * @return String
-      */
-
-    public String getOrientation() {
-        if (allowedMoves.contains("LR")) {
-            return "h";
-        } else {
-            return "v";
-        }
-    }
+  
 }

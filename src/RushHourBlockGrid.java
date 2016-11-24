@@ -42,9 +42,9 @@ public class RushHourBlockGrid {
       */
 
     public void addBlock(int x, int y, int height, int width, 
-            String stringColor, String allowedMoves) {
+            String stringColor, String orientation) {
         Position point = new Position(x, y);
-        RushHourBlock block = new RushHourBlock(point, height, width, stringColor, allowedMoves);
+        RushHourBlock block = new RushHourBlock(point, height, width, stringColor, orientation);
         blocks.add(block);
         moveBlock(block);
     }

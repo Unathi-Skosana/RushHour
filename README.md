@@ -45,14 +45,14 @@ on that game board. The following text is a template of the properties of a sing
      RE
      2 2
      2 1
-     LR
+     h
 
      This examples represents a red vehicle with upper leftmost edge at the
      coordinates (2,2) and with a width of 2, a height of 1. This vehicle
      can only move to the left or the right.
 
-     LR - represents horizontal movement.
-     DU - represents vertical movement.
+     h - represents horizontal movement.
+     v - represents vertical movement.
 
 
 ###Solution file
