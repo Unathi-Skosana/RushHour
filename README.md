@@ -28,20 +28,20 @@ single board file or a directory that contains board files.
 The board files are written in block of four lines that represent properties of the vehicles
 on that game board. The following text is a template of the properties of a single vehicle.
      
-     #####template
+     template
      
-     `color of vehicle`
-     x-coordinate` `y-coordinate`
-     `width` `height`
-     ` allowed directions of movements`
+     color of vehicle
+     x-coordinate y-coordinate
+     width height
+     orientation
 
 
-     #####example
+     example
 
-     `RE`
-     `2` `2`
-     `2` `1`
-     `LR`
+     RE
+     2 2
+     2 1
+     LR
 
      This examples represents a red vehicle with upper leftmost edge at the
      coordinates (2,2) and with a width of 2, a height of 1. This vehicle
@@ -56,12 +56,12 @@ on that game board. The following text is a template of the properties of a sing
 The solution file basically specifies the movements of the vehicles in the
 format that below.
 
-     #####template
-     `color of vehicle` `number of spaces to move` `direction of movements`
+     template
+     color of vehicle number of spaces to move direction of movements
 
      #####example
 
-     `RE` `1` `L`
+     RE 1 L
 
      This examples represents a red vehicle being moved one space to the
      left.
