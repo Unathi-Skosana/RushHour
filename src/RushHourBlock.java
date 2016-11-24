@@ -134,7 +134,7 @@ public class RushHourBlock {
       */
 
     public String getOrientation() {
-        if (allowedMoves.contains("L") || allowedMoves.contains("R")) {
+        if (allowedMoves.contains("LR")) {
             return "h";
         } else {
             return "v";
