@@ -1,52 +1,52 @@
 RE
 0 2
 2 1
-Left Right
+h
 PU
 0 3
 2 1
-Left Right
+h
 PI
 0 4
 1 2
-Down Up
+v
 GR
 1 1
 2 1
-Left Right
+h
 MA
 2 2
 1 2
-Down Up
+v
 BL
 2 4
 3 1
-Left Right
+h
 BB
 2 5
 3 1
-Left Right
+h
 YE
 3 0
 1 2
-Down Up
+v
 SO
 3 2
 1 2
-Down Up
+v
 CA
 4 0
 2 1
-Left Right
+h
 OR
 4 1
 1 2
-Down Up
+v
 LI
 4 3
 2 1
-Left Right
+h
 BR
 5 4
 1 2
-Down Up
+v
