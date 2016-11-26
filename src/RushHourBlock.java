@@ -1,8 +1,3 @@
-import java.awt.Color;
-import java.awt.Rectangle;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class RushHourBlock {
     private final String color;
     private int width;

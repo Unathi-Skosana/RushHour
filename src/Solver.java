@@ -1,19 +1,12 @@
 import java.awt.Color;
-import java.awt.Rectangle;
 import java.io.FileWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.RuntimeException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
-import java.util.Vector;
 
 public class Solver {
     private HashMap<String, String> seenStates;
