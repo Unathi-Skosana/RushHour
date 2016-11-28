@@ -1,4 +1,4 @@
-#Rush Hour puzzle solver - written in Java
+#Rush Hour puzzle solver
 
 This program solves a standard 6 by 6 rush hour board game. The solver is
 implemented to use a breadth-first search for an efficient solution,
