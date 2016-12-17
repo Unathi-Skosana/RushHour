@@ -62,8 +62,8 @@ public class RushHourGUI {
     public void animate(String solutionfile) throws FileNotFoundException,  InterruptedException {
         int number = 0;
         StdDraw.setCanvasSize(70 * grid.getBoardWidth(), 70 * grid.getBoardHeight());
-        StdDraw.setXscale(0, grid.getBoardWidth() + 0.15);
-        StdDraw.setYscale(0, grid.getBoardHeight() + 0.15);
+        StdDraw.setXscale(0, grid.getBoardWidth() + spacing);
+        StdDraw.setYscale(0, grid.getBoardHeight() + spacing);
         
         drawVehicles();  // draw initial board configuration
 
