@@ -16,7 +16,7 @@ public class Solver {
     public String boardfile;
     public RushHourBlockGrid gameBoard;
 
-    /** 
+    /**
       * initializes seenStates, statesTobeExplored, moves and gets the
       * number of blocks in gameBoard.
       * @param gameBoard - A RushHourBlockGrid object that represents
@@ -33,7 +33,7 @@ public class Solver {
         this.solution = new ArrayList<String>();
     }
 
-    /** 
+    /**
       * processes a hash of a board, if only and only if it has been not been
       * explored before if so, it adds the current state and next state to
       * seen states map and adds the moves carried out to get to next state
@@ -66,7 +66,7 @@ public class Solver {
                 gameBoard.getBoardHeight());
 
         int numProperties = 7;
-        
+
         for (int i = numProperties; i <= this.numBlocks * numProperties; i = i + numProperties) {
             String blockHash = hashCode.substring(i - numProperties, i);
             int x = Integer.parseInt(blockHash.substring(0, 1));
@@ -98,7 +98,7 @@ public class Solver {
         }
     }
 
-    /**  
+    /**
       * Outer loop generates a temporary RushHourBlockGrid each time
       * and generates all it's possible reacheable configurations from it's state
       * middle loop iterates through every block from the current state
@@ -110,13 +110,13 @@ public class Solver {
 
     public boolean solve() throws InterruptedException, IOException {
         String initialState = gameBoard.generateBoardHash();
-        addUnexploredStates(null, initialState, null, null, 0); 
-        
+        addUnexploredStates(null, initialState, null, null, 0);
+
         while (!statesTobeExplored.isEmpty())  {
             String gridState = statesTobeExplored.dequeue();
             RushHourBlockGrid currentGrid = constructBoardfromHash(gridState);
             ArrayList<RushHourBlock> blockList = currentGrid.getBlockList();
-                
+
             for (int i = 0; i < blockList.size(); i++) {
                 RushHourBlock currentBlock = blockList.get(i);
                 boolean endOfNode = false;
@@ -133,7 +133,7 @@ public class Solver {
                             if (isGameSolved(currentBlock)) {
                                 trace(solution, this.seenStates, this.moves, nextState);
                                 outputSolution(solution);
-                                
+
                                 return true;
 
                             } else {
@@ -146,7 +146,7 @@ public class Solver {
                             String color = currentBlock.getColor();
                             addUnexploredStates(gridState, nextState, color, "L", spaces);
                             currentGrid.traverseRightNode(currentBlock, spaces);
-                        
+
                         } else {
                             endOfNode = true;
                         }
@@ -164,7 +164,7 @@ public class Solver {
                             String color = currentBlock.getColor();
                             addUnexploredStates(gridState, nextState, color, "U", spaces);
                             currentGrid.traverseDownNode(currentBlock, spaces);
-                        
+
                         } else {
                             endOfNode = true;
                         }
@@ -199,9 +199,9 @@ public class Solver {
         }
     }
 
-    /** 
+    /**
       * outputs the solution to a text file,
-      * @param solution - contains the solution 
+      * @param solution - contains the solution
       *     populated by the trace method.
       */
 
@@ -218,10 +218,10 @@ public class Solver {
     public RushHourBlockGrid parseArgs(String inputfile) throws IOException {
         validateBoard(new Scanner(new File(inputfile)));
         Scanner input = new Scanner(new File(inputfile));
-        
+
         int numberOfLines = lineCounter(inputfile) / 4;
         RushHourBlockGrid blockGrid = new RushHourBlockGrid(6, 6);
-        
+
         for (int i = 0; i < numberOfLines; i++) {
             String color = input.nextLine();
             int x = input.nextInt();
@@ -242,7 +242,7 @@ public class Solver {
     private static int lineCounter(String filename) throws FileNotFoundException {
         Scanner file = new Scanner(new File(filename));
         int count = 0;
-        
+
         while (file.hasNext()) {
             count++;
             file.nextLine();
